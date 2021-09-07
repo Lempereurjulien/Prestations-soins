@@ -35,4 +35,9 @@ namespace Prestations_soins
         public string Prenom { get => prenom; set => prenom = value; }
         public DateTime DateNaissance { get => dateNaissance; set => dateNaissance = value; }
     }
+
+    public  DateTime getNbJoursSoins()
+    {
+
+    }
 }

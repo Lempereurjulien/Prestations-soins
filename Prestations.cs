@@ -22,4 +22,9 @@ namespace Prestations_soins
         public string Libelle { get => libelle; set => libelle = value; }
         public DateTime DateHeureSoin { get => dateHeureSoin; set => dateHeureSoin = value; }
     }
+
+    public void compareTo()
+    {
+
+    }
 }
