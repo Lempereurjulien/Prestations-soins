@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MaBoiteAOutils;
+using soins;
 
-namespace Prestations_soins
+
+namespace ClassesMetier
 {
     public class Intervenant
     {
@@ -19,7 +22,7 @@ namespace Prestations_soins
         }
 
         //Property
-        public string Nom { get => nom; set => nom = value; }
-        public string Prenom { get => prenom; set => prenom = value; }
+        public string Nom { get => nom;}
+        public string Prenom { get => prenom;}
     }
 }

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MaBoiteAOutils;
+using soins;
 
-namespace Prestations_soins
+
+namespace ClassesMetier
 {
-      class IntervenantExterne :Intervenant()
+      class IntervenantExterne :Intervenant
     {     
         private string specialite;
         private string adresse;
@@ -19,8 +22,8 @@ namespace Prestations_soins
             this.tel = tel;
         }
 
-        public string Specialite { get => specialite; set => specialite = value; }
-        public string Adresse { get => adresse; set => adresse = value; }
-        public string Tel { get => tel; set => tel = value; }
+        public string Specialite { get => specialite;}
+        public string Adresse { get => adresse;}
+        public string Tel { get => tel;}
     }
 }

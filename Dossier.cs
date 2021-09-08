@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassesMetier;
 
-namespace Prestations_soins
+
+namespace MaBoiteAOutils
 {
     class Dossier
     {
@@ -31,13 +33,16 @@ namespace Prestations_soins
         }
 
         //Property
-        public string Nom { get => nom; set => nom = value; }
-        public string Prenom { get => prenom; set => prenom = value; }
-        public DateTime DateNaissance { get => dateNaissance; set => dateNaissance = value; }
+        public string Nom { get => nom;}
+        public string Prenom { get => prenom;}
+        public DateTime DateNaissance { get => dateNaissance;}
+
+        public int getNbJoursSoins(Dossier actuelle)
+        {
+            return listePrestations.Count;
+        }
+
     }
 
-    public  DateTime getNbJoursSoins()
-    {
-
-    }
+    
 }
