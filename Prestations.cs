@@ -28,16 +28,9 @@ namespace MaBoiteAOutils
 
         //Méthodes
         //Renvoi la date la plus vielle entre les 2 prestations
-        public Prestations compareTo(Prestations une, Prestations deux)
+        public int compareTo(Prestations une, Prestations deux)
         {
-            if (une.dateHeureSoin.Day > deux.dateHeureSoin.Day)
-            {
-                return deux;
-            }
-            else
-            {
-                return une;
-            }
+             return DateTime.Compare(une.dateHeureSoin.Date, deux.dateHeureSoin.Date);                       
         }
     }
 }

@@ -24,5 +24,11 @@ namespace ClassesMetier
         //Property
         public string Nom { get => nom;}
         public string Prenom { get => prenom;}
+
+        //Méthode
+        
     }
+
+    
+    
 }

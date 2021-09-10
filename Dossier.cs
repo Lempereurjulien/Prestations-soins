@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassesMetier;
+using MaBoiteAOutils;
 
 
 namespace MaBoiteAOutils
@@ -37,11 +38,37 @@ namespace MaBoiteAOutils
         public string Prenom { get => prenom;}
         public DateTime DateNaissance { get => dateNaissance;}
 
-        public int getNbJoursSoins(Dossier actuelle)
+        //Méthodes
+            //Ajoutes une prestations au dossier
+        public void ajoutePrestations(Prestations nouvellePresta) 
         {
-            return listePrestations.Count;
+            listePrestations.Add(nouvellePresta);
         }
 
+            //Compte le nombre de jour de soins avec la méthode "count"
+        public int getNbJoursSoins(Dossier actuelle)
+        {
+          return  actuelle.listePrestations.Count;
+        }
+
+            //Compte le nombre de jour de soins avec la méthode foreach
+        public int getNbjoursSoinsV2(Dossier actuelleV2)
+        {
+            int getNbJoursSoins = 0;
+            foreach(Prestations prestations in listePrestations)
+            {
+                getNbJoursSoins += 1;
+            }
+            return getNbJoursSoins;
+        }
+
+        public int getNbPrestationsExternes(Dossier choisi)
+        {
+            foreach(Prestations prestationsExterne in listePrestations)
+            {
+                if(prestationsExterne.)
+            }
+        }
     }
 
     
