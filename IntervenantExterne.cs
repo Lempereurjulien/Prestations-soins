@@ -9,7 +9,7 @@ using soins;
 
 namespace ClassesMetier
 {
-      class IntervenantExterne :Intervenant
+     public class IntervenantExterne :Intervenant
     {     
         private string specialite;
         private string adresse;

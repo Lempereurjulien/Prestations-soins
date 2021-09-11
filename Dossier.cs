@@ -64,10 +64,21 @@ namespace MaBoiteAOutils
 
         public int getNbPrestationsExternes(Dossier choisi)
         {
-            foreach(Prestations prestationsExterne in listePrestations)
+          int NbPrestationsExternes = 0;
+            foreach (Prestations prestationsExterne in choisi.listePrestations)
             {
-                if(prestationsExterne.)
+                if (prestationsExterne.Intervenant == prestationsExterne.IntervenantExterne)
+                {
+                    NbPrestationsExternes += 1;
+                }
             }
+
+            return NbPrestationsExternes;
+        }
+
+        public int getNbPrestations(Dossier choisi)
+        {
+            return choisi.listePrestations.Count();
         }
     }
 
