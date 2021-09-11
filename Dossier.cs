@@ -43,6 +43,7 @@ namespace MaBoiteAOutils
         public void ajoutePrestations(Prestations nouvellePresta) 
         {
             listePrestations.Add(nouvellePresta);
+            
         }
 
             //Compte le nombre de jour de soins avec la méthode "count"
