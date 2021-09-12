@@ -49,7 +49,20 @@ namespace MaBoiteAOutils
             //Compte le nombre de jour de soins avec la méthode "count"
         public int getNbJoursSoins(Dossier actuelle)
         {
-          return  actuelle.listePrestations.Count;
+            int getNbJours = 0;
+            for (int i = 0; i < actuelle.listePrestations.Count-1; i++)
+            {
+                
+               if(actuelle.listePrestations[i].CompareTo(actuelle.listePrestations[i], actuelle.listePrestations[i + 1]) >0)
+                {
+                    getNbJours += 1;
+                }
+               else if(actuelle.listePrestations[i+1].CompareTo(actuelle.listePrestations[i], actuelle.listePrestations[i]) > 0)
+                {
+                    getNbJours += 1;
+                }
+            }
+            return getNbJours;
         }
 
             //Compte le nombre de jour de soins avec la méthode foreach
@@ -58,6 +71,7 @@ namespace MaBoiteAOutils
             int getNbJoursSoins = 0;
             foreach(Prestations prestations in listePrestations)
             {
+                
                 getNbJoursSoins += 1;
             }
             return getNbJoursSoins;
@@ -65,14 +79,26 @@ namespace MaBoiteAOutils
 
         public int getNbPrestationsExternes(Dossier choisi)
         {
-          int NbPrestationsExternes = 0;
-            foreach (Prestations prestationsExterne in choisi.listePrestations)
+            int NbPrestationsExternes = 0;
+            foreach (Prestations prestaExterne in choisi.listePrestations)
             {
-                if (prestationsExterne.Intervenant == prestationsExterne.IntervenantExterne)
+                if (prestaExterne.IntervenantExterne is null) 
                 {
-                    NbPrestationsExternes += 1;
+                    
+                }
+                else
+                {
+                    NbPrestationsExternes++;
                 }
             }
+
+            //foreach (Prestations prestationsExterne in choisi.listePrestations)
+            //{
+            //    if (listePrestations(prestationsExterne.IntervenantExterne))
+            //    {
+            //        NbPrestationsExternes += 1;
+            //    }
+            //}
 
             return NbPrestationsExternes;
         }
