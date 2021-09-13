@@ -41,10 +41,10 @@ namespace MaBoiteAOutils
 
         //Méthodes
         //Renvoi la date la plus vielle entre les 2 prestations
-        public int CompareTo(Prestations une, Prestations deux)
+        public int compareTo(Prestations une, Prestations deux)
         {
-            var a = DateTime.Compare(une.dateHeureSoin, deux.dateHeureSoin);
-            return a;
+            var date = une.DateHeureSoin.Date.CompareTo(deux.dateHeureSoin.Date);
+            return date;
             // var date = DateTime.Compare(une.dateHeureSoin.Date, deux.dateHeureSoin.Date);
             //return date;
         }

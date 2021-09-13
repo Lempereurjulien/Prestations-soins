@@ -59,33 +59,32 @@ namespace soins
 
             Console.WriteLine("Nom :" + RJ.Nom + " Prenom : " + RJ.Prenom + " Date de naissance: " + RJ.DateNaissance.Date);
             //1 libelle
-            Console.WriteLine("Libelle " + listePrestation[0].Libelle + " - " + listePrestation[0].DateHeureSoin +
+            Console.WriteLine("         Libelle " + listePrestation[0].Libelle + " - " + listePrestation[0].DateHeureSoin +
                 " - Intervenant : " + listePrestation[0].Intervenant.Nom + " - " + listePrestation[0].Intervenant.Prenom);
             //2 libelle 
-            Console.WriteLine("Libelle " + listePrestation[1].Libelle + " - " + listePrestation[1].DateHeureSoin +
+            Console.WriteLine("         Libelle " + listePrestation[1].Libelle + " - " + listePrestation[1].DateHeureSoin +
                 " - Intervant : " + listePrestation[1].IntervenantExterne.Nom + " - " + listePrestation[1].IntervenantExterne.Prenom +
                 " Spécialité : " + listePrestation[1].IntervenantExterne.Specialite + " " + listePrestation[1].IntervenantExterne.Adresse +
                 " - " + listePrestation[1].IntervenantExterne.Tel);
             //3 libelle 
-            Console.WriteLine("Libelle " + listePrestation[2].Libelle + " - " + listePrestation[2].DateHeureSoin +
+            Console.WriteLine("         Libelle " + listePrestation[2].Libelle + " - " + listePrestation[2].DateHeureSoin +
                 " - Intervant : " + listePrestation[2].IntervenantExterne.Nom + " - " + listePrestation[2].IntervenantExterne.Prenom +
                 " Spécialité : " + listePrestation[2].IntervenantExterne.Specialite + " " + listePrestation[2].IntervenantExterne.Adresse +
                 " - " + listePrestation[2].IntervenantExterne.Tel);
             //4 libelle 
-            Console.WriteLine("Libelle " + listePrestation[3].Libelle + " - " + listePrestation[3].DateHeureSoin +
+            Console.WriteLine("         Libelle " + listePrestation[3].Libelle + " - " + listePrestation[3].DateHeureSoin +
                " - Intervenant : " + listePrestation[3].Intervenant.Nom + " - " + listePrestation[3].Intervenant.Prenom);
             //5 libelle
-            Console.WriteLine("Libelle " + listePrestation[4].Libelle + " - " + listePrestation[4].DateHeureSoin +
+            Console.WriteLine("         Libelle " + listePrestation[4].Libelle + " - " + listePrestation[4].DateHeureSoin +
                " - Intervenant : " + listePrestation[4].Intervenant.Nom + " - " + listePrestation[4].Intervenant.Prenom);
             //6 libelle 
-            Console.WriteLine("Libelle " + listePrestation[5].Libelle + " - " + listePrestation[5].DateHeureSoin +
+            Console.WriteLine("         Libelle " + listePrestation[5].Libelle + " - " + listePrestation[5].DateHeureSoin +
                " - Intervenant : " + listePrestation[5].Intervenant.Nom + " - " + listePrestation[5].Intervenant.Prenom);
             
             Console.WriteLine("-----Fin dossier--------");
             Console.WriteLine("Nombre de jours de soins V1 : " + RJ.getNbJoursSoins(RJ));
             Console.WriteLine("Nombre de jours de soins V2 : " + RJ.getNbjoursSoinsV2(RJ));
             Console.WriteLine("Nombre de soins externes : " + RJ.getNbPrestationsExternes(RJ));
-            Console.WriteLine();
             Console.ReadLine();
         }
     }

@@ -49,20 +49,22 @@ namespace MaBoiteAOutils
             //Compte le nombre de jour de soins avec la méthode "count"
         public int getNbJoursSoins(Dossier actuelle)
         {
-            int getNbJours = 0;
-            for (int i = 0; i < actuelle.listePrestations.Count-1; i++)
+            int getNbJours = actuelle.listePrestations.Count;
+            Prestations presta;
+
+            for(int i =0;i<actuelle.listePrestations.Count-1;i++)
             {
-                
-               if(actuelle.listePrestations[i].CompareTo(actuelle.listePrestations[i], actuelle.listePrestations[i + 1]) >0)
+                for (int a = i+1; a < actuelle.listePrestations.Count; a++)
                 {
-                    getNbJours += 1;
+                    presta = actuelle.listePrestations[i];
+                    if (presta.compareTo(presta, actuelle.listePrestations[a]) == 0)
+                    {
+                        getNbJours -= 1;
+                    }
+                    
                 }
-               else if(actuelle.listePrestations[i+1].CompareTo(actuelle.listePrestations[i], actuelle.listePrestations[i]) > 0)
-                {
-                    getNbJours += 1;
-                }
-            }
-            return getNbJours;
+            }         
+                return getNbJours;
         }
 
             //Compte le nombre de jour de soins avec la méthode foreach
@@ -75,7 +77,7 @@ namespace MaBoiteAOutils
                 getNbJoursSoins += 1;
             }
             return getNbJoursSoins;
-        }
+         }
 
         public int getNbPrestationsExternes(Dossier choisi)
         {
