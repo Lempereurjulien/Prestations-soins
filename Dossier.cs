@@ -70,12 +70,20 @@ namespace MaBoiteAOutils
             //Compte le nombre de jour de soins avec la méthode foreach
         public int getNbjoursSoinsV2(Dossier actuelleV2)
         {
-            int getNbJoursSoins = 0;
-            foreach(Prestations prestations in listePrestations)
+            int getNbJoursSoins = actuelleV2.listePrestations.Count;           
+            for (int i = 0; i < actuelleV2.listePrestations.Count - 1; i++)
             {
-                
-                getNbJoursSoins += 1;
+                for (int a = i + 1; a < actuelleV2.listePrestations.Count; a++)
+                {
+                    var presta = actuelleV2.listePrestations[i].DateHeureSoin.Date;
+                    if (presta==actuelleV2.listePrestations[a].DateHeureSoin.Date)
+                    {
+                        getNbJoursSoins -= 1;
+                    }
+
+                }
             }
+
             return getNbJoursSoins;
          }
 

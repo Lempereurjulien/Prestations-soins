@@ -20,7 +20,7 @@ namespace soins
 
             //1 prestation
             Intervenant DJ = new Intervenant("Dupont", "Jean");
-            var dateP3 =new DateTime(2015, 9, 10, 12, 0, 0);
+            var dateP3=new DateTime(2015, 9, 10, 12, 0, 0);
             Prestations P3 = new Prestations("P3", dateP3,DJ);
             RJ.ajoutePrestations(P3);
 
