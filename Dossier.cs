@@ -9,7 +9,7 @@ using MaBoiteAOutils;
 
 namespace MaBoiteAOutils
 {
-    class Dossier
+   public class Dossier
     {
         private string nom;
         private string prenom;
