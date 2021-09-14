@@ -13,7 +13,7 @@ namespace soins
         static void Main()
         {
             //Dossier
-            lllll
+            
             var dateRJ = new DateTime(1980, 12, 3);
             List<Prestations> listePrestation = new List<Prestations>();
             Dossier RJ = new Dossier("Robert", "Jean", dateRJ, listePrestation);
