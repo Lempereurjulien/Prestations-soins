@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MaBoiteAOutils;
 using ClassesMetier;
+using Prestations_soins;
 
 namespace soins
 {
@@ -56,7 +57,7 @@ namespace soins
             RJ.ajoutePrestations(P5);
 
             //Mise en page
-           
+            Prestations_soins.Traitement.TesteDOssier(RJ, RJ.listePrestations);
         }
     }
 }
