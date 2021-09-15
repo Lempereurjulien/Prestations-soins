@@ -48,6 +48,7 @@ namespace soins
             Intervenant BM = new Intervenant("Blanchard", "Michel");
             var dateP6 = new DateTime(2015, 9, 8, 9, 0, 0);
             Prestations P6 = new Prestations("P6", dateP6, BM);
+
             RJ.ajoutePrestations(P6);
 
             //6 prestation
@@ -57,7 +58,8 @@ namespace soins
             RJ.ajoutePrestations(P5);
 
             //Mise en page
-            Prestations_soins.Traitement.TesteDOssier(RJ, RJ.listePrestations);
+            Traitement.TesteDOssier(RJ);
+            Console.ReadLine();
         }
     }
 }

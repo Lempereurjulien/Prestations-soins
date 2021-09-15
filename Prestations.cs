@@ -14,7 +14,7 @@ namespace MaBoiteAOutils
         private string libelle;
         private DateTime dateHeureSoin;
         private Intervenant intervenant;
-        private IntervenantExterne intervenantExterne;
+       
 
         //Constructeur
         public Prestations(string libelle, DateTime dateHeureSoin,Intervenant intervenant)
@@ -24,12 +24,7 @@ namespace MaBoiteAOutils
             this.intervenant = intervenant;
         }
 
-        public Prestations(string libelle, DateTime dateHeureSoin, IntervenantExterne intervenantExterne)
-        {
-            this.libelle = libelle;
-            this.dateHeureSoin = dateHeureSoin;
-            this.intervenantExterne = intervenantExterne;
-        }
+        
 
         
 
@@ -37,7 +32,7 @@ namespace MaBoiteAOutils
         public string Libelle { get => libelle;}
         public DateTime DateHeureSoin { get => dateHeureSoin;}
         public Intervenant Intervenant { get => intervenant; }
-        public IntervenantExterne IntervenantExterne { get => intervenantExterne;}
+        
 
         //Méthodes
         //Renvoi la date la plus vielle entre les 2 prestations
@@ -48,6 +43,17 @@ namespace MaBoiteAOutils
             // var date = DateTime.Compare(une.dateHeureSoin.Date, deux.dateHeureSoin.Date);
             //return date;
         }
-        
+        public int compareTo2(Prestations une)
+        {
+            var date = this.DateHeureSoin.Date.CompareTo(une.dateHeureSoin.Date);
+            return date;
+            // var date = DateTime.Compare(une.dateHeureSoin.Date, deux.dateHeureSoin.Date);
+            //return date;
+        }
+
+        public override string ToString()
+        {
+            return "\n\tLibelle " + this.libelle + " - " + this.dateHeureSoin + " " + this.intervenant;
+        }
     }
 }

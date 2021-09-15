@@ -26,9 +26,16 @@ namespace ClassesMetier
         public string Prenom { get => prenom;}
 
         //Méthode
-        
-    }
+        public override string ToString()
+        {
+            return "Intervenant :" + this.nom + " - " + this.prenom;
+        }
 
-    
-    
+        public int GetNbPrestations( Intervenant intervenant)
+        {
+
+            foreach(Prestations prestations in ) { }
+        }
+}
+    }   
 }

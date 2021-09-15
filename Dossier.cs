@@ -60,8 +60,7 @@ namespace MaBoiteAOutils
                     if (presta.compareTo(presta, actuelle.listePrestations[a]) == 0)
                     {
                         getNbJours -= 1;
-                    }
-                    
+                    }                   
                 }
             }         
                 return getNbJours;
@@ -92,14 +91,11 @@ namespace MaBoiteAOutils
             int NbPrestationsExternes = 0;
             foreach (Prestations prestaExterne in choisi.listePrestations)
             {
-                if (prestaExterne.IntervenantExterne is null) 
-                {
-                    
-                }
-                else
+                if (prestaExterne.Intervenant is IntervenantExterne) 
                 {
                     NbPrestationsExternes++;
                 }
+                
             }
 
             //foreach (Prestations prestationsExterne in choisi.listePrestations)
@@ -117,7 +113,19 @@ namespace MaBoiteAOutils
         {
             return choisi.listePrestations.Count();
         }
-    }
 
-    
+        public override string ToString()
+        {
+            string s = "-----Début de dossier----------";
+            s += "\nNom :" + this.nom + "Prenom :" + this.prenom + "Date de naissance : " + this.dateNaissance;
+            foreach(Prestations unePrestation in this.listePrestations)
+            {
+                s += "\n" + unePrestation.ToString();
+                
+            }
+            string a = "\n----Fin dossier-----";
+            s+=a;
+            return s;
+        }
+    } 
 }
