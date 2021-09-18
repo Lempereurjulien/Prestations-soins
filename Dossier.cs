@@ -15,6 +15,7 @@ namespace MaBoiteAOutils
         private string prenom;
         private DateTime dateNaissance;
         private List<Prestations> listePrestations;
+        private DateTime dateCreation;
 
         //Constructeur
         public Dossier(string nom, string prenom, DateTime dateNaissance)
@@ -33,13 +34,24 @@ namespace MaBoiteAOutils
             this.listePrestations = listePrestations;
         }
 
+        public Dossier(string nom, string prenom, DateTime dateNaissance, List<Prestations> listePrestations, DateTime dateCreation)
+        {
+            this.nom = nom;
+            this.prenom = prenom;
+            this.dateNaissance = dateNaissance;
+            this.listePrestations = listePrestations;
+            this.dateCreation = dateCreation;
+        }
+
         //Property
         public string Nom { get => nom;}
         public string Prenom { get => prenom;}
         public DateTime DateNaissance { get => dateNaissance;}
+        public DateTime DateCreation { get => dateCreation;}
+
 
         //Méthodes
-            //Ajoutes une prestations au dossier
+        //Ajoutes une prestations au dossier
         public void ajoutePrestations(Prestations nouvellePresta) 
         {
             listePrestations.Add(nouvellePresta);

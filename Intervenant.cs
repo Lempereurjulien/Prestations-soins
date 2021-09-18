@@ -13,6 +13,7 @@ namespace ClassesMetier
     {
         protected string nom;
         protected string prenom;
+        List<Prestations> listePrestations= new List<Prestations>();
 
         //Constructeur
         public  Intervenant(string nom, string prenom)
@@ -31,11 +32,27 @@ namespace ClassesMetier
             return "Intervenant :" + this.nom + " - " + this.prenom;
         }
 
-        public int GetNbPrestations( Intervenant intervenant)
+        public int GetNbPrestationsI(Intervenant intervenant)
         {
-
-            foreach(Prestations prestations in ) { }
+            int getNbpresta= 0;
+            foreach (Prestations prestations in listePrestations) 
+            { 
+                if(prestations.Intervenant.nom == intervenant.nom)
+                {
+                    getNbpresta++;
+                }
+            }
+            return getNbpresta;
         }
-}
+
+        public int GetNbPrestation()
+        {
+            return listePrestations.Count();
+        }
+        public void ajoutePrestations(Prestations nouvellePresta)
+        {
+            listePrestations.Add(nouvellePresta);
+
+        }
     }   
 }

@@ -59,6 +59,8 @@ namespace soins
 
             //Mise en page
             Traitement.TesteDOssier(RJ);
+            Console.WriteLine("Nb Prestations Intervenant : " + Traitement.TesteGetNbPrestationI());
+            Console.WriteLine("Nb Prestations Intervenant Externe: " + Traitement.TesteGetNbPrestationIE());
             Console.ReadLine();
         }
     }

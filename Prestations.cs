@@ -53,7 +53,7 @@ namespace MaBoiteAOutils
 
         public override string ToString()
         {
-            return "\n\tLibelle " + this.libelle + " - " + this.dateHeureSoin + " " + this.intervenant;
+            return "\tLibelle " + this.libelle + " - " + this.dateHeureSoin + " " + this.intervenant;
         }
     }
 }
