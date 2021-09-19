@@ -12,6 +12,7 @@ namespace Soins2021
 {
     public class SoinsException:Exception
     {
+           //
         public SoinsException() { 
         }
 
