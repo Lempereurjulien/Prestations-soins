@@ -32,16 +32,10 @@ namespace MaBoiteAOutils
             this.prenom = prenom;
             this.dateNaissance = dateNaissance;
             this.listePrestations = listePrestations;
+            this.dateCreation = DateTime.Now;
         }
 
-        public Dossier(string nom, string prenom, DateTime dateNaissance, List<Prestations> listePrestations, DateTime dateCreation)
-        {
-            this.nom = nom;
-            this.prenom = prenom;
-            this.dateNaissance = dateNaissance;
-            this.listePrestations = listePrestations;
-            this.dateCreation = dateCreation;
-        }
+        
 
         //Property
         public string Nom { get => nom;}
@@ -91,10 +85,8 @@ namespace MaBoiteAOutils
                     {
                         getNbJoursSoins -= 1;
                     }
-
                 }
             }
-
             return getNbJoursSoins;
          }
 
