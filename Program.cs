@@ -17,7 +17,7 @@ namespace soins
             try
             {
                 //Mise en page
-                Traitement.TesteDOssier();
+                Traitement.TesteDossier();
                 Console.WriteLine("Nb Prestations Intervenant : " + Traitement.TesteGetNbPrestationI());
                 Console.WriteLine("Nb Prestations Intervenant Externe: " + Traitement.TesteGetNbPrestationIE());
                 Console.ReadLine();

@@ -14,7 +14,7 @@ namespace Prestations_soins
     static class Traitement
     {
 
-        public static void TesteDOssier()
+        public static void TesteDossier()
         {
             Intervenant DP = new Intervenant("Dupont", "Jean");
             IntervenantExterne DA = new IntervenantExterne("Durand", "Annie", "Cardiologue", "Marseille", "0202020202");
