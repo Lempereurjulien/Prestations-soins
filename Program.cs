@@ -12,12 +12,12 @@ namespace soins
     class Program
     {
         static void Main()
-        {
+        {           
+            
             try
             {
                 //Mise en page
                 Traitement.TesteDOssier();
-                DateTime a = new DateTime(25, 45, 78);
                 Console.WriteLine("Nb Prestations Intervenant : " + Traitement.TesteGetNbPrestationI());
                 Console.WriteLine("Nb Prestations Intervenant Externe: " + Traitement.TesteGetNbPrestationIE());
                 Console.ReadLine();
@@ -25,6 +25,12 @@ namespace soins
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                DirAppend.TxtException(ex);
+                Console.ReadLine();
+            }
+            finally
+            {
+
             }
             
         }
