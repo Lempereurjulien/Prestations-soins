@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassesMetier;
 using MaBoiteAOutils;
+using Soins2021;
 
 
 namespace MaBoiteAOutils
@@ -31,11 +32,23 @@ namespace MaBoiteAOutils
             this.nom = nom;
             this.prenom = prenom;
             this.dateNaissance = dateNaissance;
+            if(dateNaissance > DateTime.Now)
+            {
+                throw new SoinsException("La date de naissance du dossier ne peut pas être supérieur à la date actuelle.")
+            }
             this.listePrestations = listePrestations;
             this.dateCreation = DateTime.Now;
         }
+        public Dossier(string nom, string prenom, DateTime dateNaissance, List<Prestations> listePrestations, DateTime dateCreation)
+        {
+            this.nom = nom;
+            this.prenom = prenom;
+            this.dateNaissance = dateNaissance;
+            this.listePrestations = listePrestations;
+            this.dateCreation = dateCreation;
+        }
 
-        
+
 
         //Property
         public string Nom { get => nom;}
@@ -48,6 +61,9 @@ namespace MaBoiteAOutils
         //Ajoutes une prestations au dossier
         public void ajoutePrestations(Prestations nouvellePresta) 
         {
+            if (nouvellePresta.DateHeureSoin > DateTime.Now){
+                throw new SoinsException("La date de prestation ne peut pas être supérieur à la date actuelle");
+            } 
             listePrestations.Add(nouvellePresta);
             
         }

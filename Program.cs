@@ -28,10 +28,7 @@ namespace soins
                 DirAppend.TxtException(ex);
                 Console.ReadLine();
             }
-            finally
-            {
 
-            }
             
         }
     }
