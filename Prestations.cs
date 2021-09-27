@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassesMetier;
 using soins;
+using Soins2021;
 
 
 namespace MaBoiteAOutils
@@ -21,6 +22,10 @@ namespace MaBoiteAOutils
         {
             this.libelle = libelle;
             this.dateHeureSoin = dateHeureSoin;
+            if(dateHeureSoin > DateTime.Now)
+            {
+                throw new SoinsException("La date de prestation doit être inférieure à la date courante");
+            }
             this.intervenant = intervenant;
         }
 

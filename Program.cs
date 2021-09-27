@@ -25,7 +25,8 @@ namespace soins
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                DirAppend.TxtException(ex);
+               TempException = new Prestations_soins.Exceptions.TempException(ex);
+
                 Console.ReadLine();
             }
 

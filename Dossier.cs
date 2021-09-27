@@ -19,11 +19,12 @@ namespace MaBoiteAOutils
         private DateTime dateCreation;
 
         //Constructeur
-        public Dossier(string nom, string prenom, DateTime dateNaissance)
+        public Dossier(string nom, string prenom, DateTime dateNaissance, DateTime datecreation)
         {
             this.nom = nom;
             this.prenom = prenom;
             this.dateNaissance = dateNaissance;
+            this.dateCreation = dateCreation;
         }
 
         //Constructeur ListePrestations
@@ -34,12 +35,12 @@ namespace MaBoiteAOutils
             this.dateNaissance = dateNaissance;
             if(dateNaissance > DateTime.Now)
             {
-                throw new SoinsException("La date de naissance du dossier ne peut pas être supérieur à la date actuelle.")
+                throw new SoinsException("La date de naissance du dossier ne peut pas être supérieur à la date actuelle.");
             }
             this.listePrestations = listePrestations;
             this.dateCreation = DateTime.Now;
         }
-        public Dossier(string nom, string prenom, DateTime dateNaissance, List<Prestations> listePrestations, DateTime dateCreation)
+        public Dossier(string nom, string prenom, DateTime dateNaissance, DateTime dateCreation, List<Prestations> listePrestations )
         {
             this.nom = nom;
             this.prenom = prenom;
