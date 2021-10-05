@@ -28,12 +28,12 @@ namespace Prestations_soins.Exceptions
             MessageException = ex.Message;
             UserException = "userException";
             UserMachine = "userMachine";
-            EcritJson(ex);
+            
              
         }
 
-        public void EcritJson(Exception except) {
-            string jsonString = (JsonConvert.SerializeObject(except, Formatting.Indented));
+        public void EcritJson() {
+            string jsonString = (JsonConvert.SerializeObject(Formatting.Indented));
             var streamwriter = new StreamWriter(@"C: \Users\33610\Documents\Julien\BTS\ROCHE\C#\Bts 2eme anné\Prestations soins\ExceptionData.json");
             Console.WriteLine(jsonString);
         }

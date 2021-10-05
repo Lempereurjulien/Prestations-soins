@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ClassesMetier;
 using soins;
 using Soins2021;
+using Prestations_soins.Exceptions;
 
 
 namespace MaBoiteAOutils
@@ -25,6 +26,7 @@ namespace MaBoiteAOutils
             if(dateHeureSoin > DateTime.Now)
             {
                 throw new SoinsException("La date de prestation doit être inférieure à la date courante");
+                TempException a = new TempException(SoinsException)
             }
             this.intervenant = intervenant;
         }
